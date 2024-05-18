@@ -8,7 +8,7 @@ if (isset($_GET['type']) && isset($_GET['file'])) {
     $filedir = $_GET['file'];
 
     // File path
-    $filename = __DIR__ . '/templates/' . $filedir;
+    $filename = __DIR__ . '/templates/aset/' . $filedir;
 
     $config = parse_ini_file('konfig.ini');
 
@@ -26,10 +26,14 @@ if (isset($_GET['type']) && isset($_GET['file'])) {
     foreach ($_GET as $key => $value) {
         // Exclude 'type' and 'file' parameters
         if ($key != 'type' && $key != 'file') {
+            // Convert 'tahun' to integer if it is the 'tahun' parameter
+            if ($key == 'tahun') {
+                $value = (int)$value;
+            }
             $report->setParameter([$key => $value]);
         }
     }
-
+    // dd($_GET);
     // Set additional parameter
     $report->setParameter(['welcome' => 'Welcome'])
         ->setDataSource($config)

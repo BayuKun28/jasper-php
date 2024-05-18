@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="header_buku_penerimaan_barang" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4938781c-13d5-49e9-a72f-ea7cd5206b41">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="persediaan"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from setting_laporan where id_skpd = 1 LIMIT 1]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="setting_laporan"/>
+	</field>
+	<field name="id_skpd" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id_skpd"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_skpd"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="setting_laporan"/>
+	</field>
+	<field name="pemda" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pemda"/>
+		<property name="com.jaspersoft.studio.field.label" value="pemda"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="setting_laporan"/>
+	</field>
+	<field name="ibukota" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ibukota"/>
+		<property name="com.jaspersoft.studio.field.label" value="ibukota"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="setting_laporan"/>
+	</field>
+	<field name="nama_pengguna" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nama_pengguna"/>
+		<property name="com.jaspersoft.studio.field.label" value="nama_pengguna"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="setting_laporan"/>
+	</field>
+	<field name="nip_pengguna" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nip_pengguna"/>
+		<property name="com.jaspersoft.studio.field.label" value="nip_pengguna"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="setting_laporan"/>
+	</field>
+	<field name="pangkat_pengguna" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pangkat_pengguna"/>
+		<property name="com.jaspersoft.studio.field.label" value="pangkat_pengguna"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="setting_laporan"/>
+	</field>
+	<field name="nama_kuasa" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nama_kuasa"/>
+		<property name="com.jaspersoft.studio.field.label" value="nama_kuasa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="setting_laporan"/>
+	</field>
+	<field name="nip_kuasa" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nip_kuasa"/>
+		<property name="com.jaspersoft.studio.field.label" value="nip_kuasa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="setting_laporan"/>
+	</field>
+	<field name="pangkat_kuasa" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pangkat_kuasa"/>
+		<property name="com.jaspersoft.studio.field.label" value="pangkat_kuasa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="setting_laporan"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="50">
+			<staticText>
+				<reportElement x="160" y="30" width="20" height="20" uuid="349dcca2-a6f8-4585-9494-7c403b591000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="160" height="20" uuid="45a35a46-8008-4f5d-9fbb-d3086baabeed"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Pengguna Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="160" height="20" uuid="5ab89fec-819b-4766-b01f-3de40692a4ed"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Kuasa Pengguna Barang]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="30" width="622" height="20" uuid="ee76e5ba-92f7-47b9-a2dd-733631893eed"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nama_pengguna}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="0" width="20" height="20" uuid="c62d4aa3-b5a7-476c-90fd-da086a707369"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="0" width="622" height="20" uuid="25afea6c-ca16-4a21-869e-8cb81c4eeb3b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nama_kuasa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>
